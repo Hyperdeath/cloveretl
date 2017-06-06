@@ -8,7 +8,7 @@
 </Global>
 <Phase number="0">
 <Node guiName="Concatenate" guiX="538" guiY="202" id="CONCATENATE" type="CONCATENATE"/>
-<Node existingSheetsActions="DO_NOTHING" fileURL="${DATAOUT_DIR}/ListOfCurrencyRates.xlsx" guiName="SpreadsheetDataWriter" guiX="826" guiY="204" id="SPREADSHEET_DATA_WRITER" type="SPREADSHEET_WRITER" writeMode="OVERWRITE_SHEET_IN_MEMORY"/>
+<Node existingSheetsActions="DO_NOTHING" fileURL="${DATAOUT_DIR}/ListOfCurrencyRates.xlsx" guiName="SpreadsheetDataWriter" guiX="860" guiY="80" id="SPREADSHEET_DATA_WRITER" type="SPREADSHEET_WRITER" writeMode="OVERWRITE_SHEET_IN_MEMORY"/>
 <Node guiName="sub01" guiX="241" guiY="64" id="SUB01" jobURL="${SUBGRAPH_DIR}/sub01.sgrf" type="SUBGRAPH"/>
 <Node guiName="sub02" guiX="241" guiY="185" id="SUB1" jobURL="${SUBGRAPH_DIR}/sub02.sgrf" type="SUBGRAPH"/>
 <Node guiName="sub03" guiX="241" guiY="309" id="SUB2" jobURL="${SUBGRAPH_DIR}/sub03.sgrf" type="SUBGRAPH"/>
