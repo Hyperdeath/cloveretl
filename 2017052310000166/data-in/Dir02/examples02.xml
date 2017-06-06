@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Level1>
+	<Level2 time='2016-02-23'>
+		<Cube currency='NOK' rate='9.4930'/>
+		<Cube currency='HRK' rate='7.6300'/>
+		<Cube currency='RUB' rate='83.4916'/>
+		<Cube currency='TRY' rate='3.2512'/>
+		<Cube currency='AUD' rate='1.5322'/>
+		<Cube currency='BRL' rate='4.3755'/>
+		<Cube currency='CAD' rate='1.5128'/>
+		<Cube currency='CNY' rate='7.1909'/>
+		<Cube currency='HKD' rate='8.5679'/>
+	</Level2>
+</Level1>

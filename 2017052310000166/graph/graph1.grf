@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Graph author="Vladimír" created="Wed May 24 08:25:53 CEST 2017" guiVersion="4.6.0.M2" id="1495611218403" licenseCode="Unlicensed" name="graph1" showComponentDetails="true">
+<Global>
+<GraphParameters>
+<GraphParameterFile fileURL="workspace.prm"/>
+</GraphParameters>
+<Dictionary/>
+</Global>
+<Phase number="0">
+<Node guiName="Concatenate" guiX="538" guiY="202" id="CONCATENATE" type="CONCATENATE"/>
+<Node existingSheetsActions="DO_NOTHING" fileURL="${DATAOUT_DIR}/ListOfCurrencyRates.xlsx" guiName="SpreadsheetDataWriter" guiX="826" guiY="204" id="SPREADSHEET_DATA_WRITER" type="SPREADSHEET_WRITER" writeMode="OVERWRITE_SHEET_IN_MEMORY"/>
+<Node guiName="sub01" guiX="241" guiY="64" id="SUB01" jobURL="${SUBGRAPH_DIR}/sub01.sgrf" type="SUBGRAPH"/>
+<Node guiName="sub02" guiX="241" guiY="185" id="SUB1" jobURL="${SUBGRAPH_DIR}/sub02.sgrf" type="SUBGRAPH"/>
+<Node guiName="sub03" guiX="241" guiY="309" id="SUB2" jobURL="${SUBGRAPH_DIR}/sub03.sgrf" type="SUBGRAPH"/>
+<Edge debugMode="all" fromNode="CONCATENATE:0" guiBendpoints="" guiRouter="Manhattan" id="Edge3" inPort="Port 0 (input)" outPort="Port 0 (out)" toNode="SPREADSHEET_DATA_WRITER:0"/>
+<Edge debugMode="all" fromNode="SUB01:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (in)" outPort="Port 0 (out)" toNode="CONCATENATE:0"/>
+<Edge debugMode="all" fromNode="SUB1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge1" inPort="Port 1 (in)" outPort="Port 0 (out)" toNode="CONCATENATE:1"/>
+<Edge debugMode="all" fromNode="SUB2:0" guiBendpoints="" guiRouter="Manhattan" id="Edge2" inPort="Port 2 (in)" outPort="Port 0 (out)" toNode="CONCATENATE:2"/>
+</Phase>
+</Graph>

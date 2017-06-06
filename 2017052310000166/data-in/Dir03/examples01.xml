@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Level1>
+	<Level2 time='2016-02-23'>
+		<Cube currency='IDR' rate='14824.67'/>
+		<Cube currency='ILS' rate='4.3086'/>
+		<Cube currency='INR' rate='75.5948'/>
+		<Cube currency='KRW' rate='1351.19'/>
+		<Cube currency='MXN' rate='19.9350'/>
+		<Cube currency='MYR' rate='4.6171'/>
+		<Cube currency='NZD' rate='1.6521'/>
+		<Cube currency='PHP' rate='52.517'/>
+		<Cube currency='SGD' rate='1.5469'/>
+		<Cube currency='THB' rate='39.418'/>
+		<Cube currency='ZAR' rate='16.8486'/>
+	</Level2>
+</Level1>

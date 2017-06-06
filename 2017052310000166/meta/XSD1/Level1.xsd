@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Level1" type="Level1Type"/>
+  <xs:complexType name="CubeType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="currency" use="optional"/>
+        <xs:attribute type="xs:float" name="rate" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="Level2Type">
+    <xs:sequence>
+      <xs:element type="CubeType" name="Cube" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:date" name="time"/>
+  </xs:complexType>
+  <xs:complexType name="Level1Type">
+    <xs:sequence>
+      <xs:element type="Level2Type" name="Level2"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

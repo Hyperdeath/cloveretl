@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Graph author="Vladimír" created="Wed May 24 08:25:53 CEST 2017" guiVersion="4.6.0.M2" id="1495608033548" licenseCode="Unlicensed" name="sub01" nature="subgraph" showComponentDetails="true">
+<Global>
+<outputPorts>
+<singlePort connected="false" name="0"/>
+</outputPorts>
+<Metadata id="Metadata0">
+<Record fieldDelimiter="|" name="recordName1" recordDelimiter="\r\n" type="delimited">
+<Field name="currency" type="string"/>
+<Field name="rate" type="string"/>
+<Field name="time" type="string"/>
+</Record>
+</Metadata>
+<GraphParameters>
+<GraphParameterFile fileURL="workspace.prm"/>
+</GraphParameters>
+<Dictionary/>
+</Global>
+<Phase number="0">
+<Node guiName="ExtSort" guiX="541" guiY="129" id="EXT_SORT" sortKey="currency(a)" type="EXT_SORT"/>
+<Node guiName="SubgraphInput" guiX="200" guiY="10" id="SUBGRAPH_INPUT0" type="SUBGRAPH_INPUT">
+<Port guiY="117" name="0"/>
+</Node>
+<Node guiName="SubgraphOutput" guiX="800" guiY="10" id="SUBGRAPH_OUTPUT0" type="SUBGRAPH_OUTPUT">
+<Port guiY="117" name="0"/>
+<Port guiY="187" name="1"/>
+</Node>
+<Node guiName="XMLExtract" guiX="321" guiY="129" id="XMLEXTRACT" schema="${META_DIR}/XSD1/Level1.xsd" sourceUri="${DATAIN_DIR}/Dir03/examples01.xml" type="XML_EXTRACT">
+<attr name="mapping"><![CDATA[<Mappings>
+	<Mapping element="Level1">
+		<Mapping element="Level2">
+			<Mapping element="Cube" outPort="0"
+					xmlFields="../{}time;{}currency;{}rate"
+					cloverFields="time;currency;rate">
+			</Mapping>
+		</Mapping>
+	</Mapping>
+</Mappings>
+]]></attr>
+</Node>
+<Edge debugMode="all" fromNode="EXT_SORT:0" guiBendpoints="" guiRouter="Manhattan" id="Edge5" inPort="Port 0 (in)" outPort="Port 0 (out)" toNode="SUBGRAPH_OUTPUT0:0"/>
+<Edge debugMode="all" fromNode="XMLEXTRACT:0" guiBendpoints="" guiRouter="Manhattan" id="Edge4" inPort="Port 0 (in)" metadata="Metadata0" outPort="Port 0 (out)" toNode="EXT_SORT:0"/>
+</Phase>
+</Graph>
